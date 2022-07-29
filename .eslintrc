@@ -1,0 +1,53 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "airbnb",
+    "airbnb-typescript",
+    "plugin:prettier/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:jsx-a11y/recommended"
+  ],
+  "plugins": ["prettier", "react"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "project": ["./tsconfig.json"]
+  },
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "import/prefer-default-export": "off",
+    "react/require-default-props": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
+    "react/jsx-indent-props": [2, 2],
+    "react/jsx-indent": "off",
+    "react/jsx-one-expression-per-line": [0],
+    "react/prefer-stateless-function": [1],
+    "react/static-property-placement": [1, "property assignment"],
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/no-children-prop": "off",
+    "react/prop-types": "off",
+    "no-nested-ternary": "off",
+    "react/function-component-definition": [1, { "namedComponents": "arrow-function" }],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": ["src/**/*.test.tsx"]
+      }
+    ],
+    "import/no-cycle": "off",
+    "no-param-reassign": ["error", { "props": false }],
+    "@typescript-eslint/no-shadow": "off",
+    "jsx-a11y/label-has-associated-control": "off"
+  }
+}
